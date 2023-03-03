@@ -1,0 +1,24 @@
+{
+    "RT_pricing": {
+        "url": "http://oasis.caiso.com/oasisapi/SingleZip?queryname=PRC_INTVL_LMP&startdatetime=%sY%sm%sDT%sH:%sM-00:00&enddatetime=%eY%em%eDT%eH:%eM-00:00&version=1&resultformat=6&market_run_id=RTM&node=%entity"
+    },
+    "DA_pricing": {
+        "url": "http://oasis.caiso.com/oasisapi/SingleZip?queryname=PRC_LMP&startdatetime=%sY%sm%sDT%sH:%sM-00:00&enddatetime=%eY%em%eDT%eH:%eM-00:00&version=1&resultformat=6&market_run_id=DAM&node=%entity"
+    },
+    "Actual_load": {
+        "url": "http://oasis.caiso.com/oasisapi/SingleZip?queryname=ENE_SLRS&startdatetime=%sY%sm%sDT%sH:%sM-00:00&enddatetime=%eY%em%eDT%eH:%eM-00:00&version=1&resultformat=6&market_run_id=RTM&tac_zone_name=ALL&schedule=ALL",
+        "comment": "after-the-fact energy accoutning, per energy type. posted daily at T+1 from ISO_TOT_LOAD_MW"
+    },
+    "Fcast_load": {
+        "url": "http://oasis.caiso.com/oasisapi/SingleZip?queryname=SLD_FCST&startdatetime=%sY%sm%sDT%sH:%sM-00:00&enddatetime=%eY%em%eDT%eH:%eM-00:00&version=1&resultformat=6&market_run_id=DAM",
+        "comment": "SYS_FCST_DA_MW"
+    },
+    "Actual_weather": {
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.41&start_date=%sY-%sm-%sD&end_date=%eY-%em-%eD&hourly=temperature_2m,apparent_temperature,precipitation,direct_radiation,windspeed_10m",
+        "docs": "https://open-meteo.com/en/docs/historical-weather-api"
+    },
+    "Forecast_weather": {
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,apparent_temperature,precipitation,direct_radiation,windspeed_10m",
+        "docs": "https://open-meteo.com/en/docs"
+    }
+}
